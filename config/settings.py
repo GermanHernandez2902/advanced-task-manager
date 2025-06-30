@@ -163,3 +163,15 @@ ACCOUNT_EMAIL_REQUIRED = False
 # Redirects after login/logout
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+import os
+import dj_database_url
+
+DEBUG = os.environ.get('RENDER') != 'true'
+
+ALLOWED_HOSTS = ['advanced-task-manager.onrender.com', 'localhost', '127.0.0.1']
+
+
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+}
