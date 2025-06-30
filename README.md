@@ -1,7 +1,7 @@
 # 🧠 Advanced Task Manager
 
-A modern, Trello-inspired task management web app built with Django.  
-Manage projects, create task lists, assign priorities, tag tasks, and track progress — all in a clean and responsive UI.
+A clean and powerful web app to manage personal or team tasks efficiently.  
+Create project boards, organize tasks in lists, set priorities, add tags, and track deadlines — all in one place.
 
 ---
 
@@ -11,23 +11,24 @@ Manage projects, create task lists, assign priorities, tag tasks, and track prog
 
 ---
 
-## 📸 Features
+## 📸 What You Can Do
 
-- 🔐 **User Authentication** (signup, login, logout)
-- 📁 **Project Boards** – one per user
-- 📂 **Task Lists** – To Do, In Progress, Done (customizable)
-- ✅ **Tasks** – with title, description, deadline, and priority
-- 🏷️ **Tags** – like "frontend", "urgent", "research", etc.
-- 📊 **Status Updates** – move tasks through lists easily
-- 🖥️ **Responsive Design** – built with Bootstrap 5
-- 🌐 **Deployed on Render** – publicly accessible
+- 🔐 Register and log in securely
+- 📁 Create project boards
+- 📂 Organize tasks by list: To Do, In Progress, Done
+- 📝 Add task details: title, description, deadline
+- ⚙️ Choose priority: low, medium, high
+- 🏷️ Assign tags like "frontend", "urgent", etc.
+- 🔄 Update task status easily from the interface
+- 📱 Fully responsive design (Bootstrap 5)
+- 🌐 Publicly accessible on Render
 
 ---
 
 ## 💻 Tech Stack
 
 - **Backend**: Django 5.2, SQLite3
-- **Frontend**: HTML, Bootstrap 5, Crispy Forms
+- **Frontend**: Bootstrap 5, Crispy Forms
 - **Auth**: Django AllAuth
 - **Deploy**: Render (Free Tier)
 
@@ -52,7 +53,7 @@ pip install -r requirements.txt
 # 4. Run migrations
 python manage.py migrate
 
-# 5. Run the dev server
+# 5. Start the dev server
 python manage.py runserver
 Then go to http://127.0.0.1:8000
 
