@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold">📋 My Projects</h2>
+    <a href="{% url 'create_project' %}" class="btn btn-success">
+      <i class="bi bi-plus-circle"></i> New Project
+    </a>
+  </div>
+
+  {% if projects %}
+    <div class="row">
+      {% for project in projects %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title text-primary">{{ project.title }}</h5>
+                <p class="card-text text-muted">{{ project.description|truncatewords:20 }}</p>
+              </div>
+              <a href="{% url 'project_detail' project.id %}" class="btn btn-outline-primary mt-3 w-100">
+                <i class="bi bi-box-arrow-in-right"></i> Enter Project
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-warning text-center">
+      <i class="bi bi-exclamation-circle-fill"></i> You haven't created any projects yet.
+    </div>
+  {% endif %}
+</div>
+{% endblock %}
